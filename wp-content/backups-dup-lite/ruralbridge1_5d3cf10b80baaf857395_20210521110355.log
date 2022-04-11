@@ -1,0 +1,79 @@
+********************************************************************************
+DUPLICATOR-LITE PACKAGE-LOG: 21 de May de 2021 11:05
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.4.0
+WORDPRESS:	5.7.2
+PHP INFO:	7.4.15 | SAPI: fpm-fcgi
+SERVER:		Apache 
+PHP TIME LIMIT: [165] not allowed 
+PHP MAX MEMORY: 4294967296 (512M default) 
+MEMORY STACK: 4MB
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   MYSQLDUMP
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Is Supported
+MYSQL DUMP ERROR -1
+
+==================================================================================
+DUPLICATOR ERROR
+Please try again! If the error persists see the Duplicator 'Help' menu.
+---------------------------------------------------------------------------------
+MESSAGE:
+	Error en el volcado del shell mysql. Cambia el Script SQL por el «Código PHP» en Duplicator > Ajustes > Paquetes.
+DETAILS:
+	INSERT INTO `wp_users` VALUES (1,'sergio','$P$BoDTIKIkXh3aGHPDE86DuP03GniZYE/','sergio','sergio@ruralbridge.es','http://cel.wakeapp.org','2021-04-09 08:12:17','',0,'sergio'),(2,'miguel','$P$BRfIJsCo2BwCuPqIAZTxIdjZPVoXZ5.','miguel','miguelgamat@gmail.com','','2021-05-20 17:33:35','',0,'Miguel Garcia Mata');
+/*!40000 ALTER TABLE `wp_users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/* Duplicator WordPress Timestamp: 2021-05-21 11:05:31*/
+/* DUPLICATOR_MYSQLDUMP_EOF */
+TRACE:
+	 1. class.pack.database.php : Error (572)
+	 2. class.pack.database.php : mysqlDump (208)
+	 3. class.pack.php : build (1311)
+	 4. ctrl.package.php : runZipBuild (98)
+	 5. class-wp-hook.php : duplicator_package_build (292)
+	 6. class-wp-hook.php : apply_filters (316)
+	 7. plugin.php : do_action (484)
+	 8. admin-ajax.php : do_action (187)
+==================================================================================
+
+
+==================================================================================
+DUPLICATOR ERROR
+Please try again! If the error persists see the Duplicator 'Help' menu.
+---------------------------------------------------------------------------------
+MESSAGE:
+	Runtime error in DUP_Database::Build. Error en el volcado del shell mysql. Cambia el Script SQL por el «Código PHP» en Duplicator > Ajustes > Paquetes.
+DETAILS:
+	Exception: Exception: Error en el volcado del shell mysql. Cambia el Script SQL por el «Código PHP» en Duplicator > Ajustes > Paquetes. in /home/sinplay/ruralbridge/wp-content/plugins/duplicator/classes/class.logging.php:275
+Stack trace:
+#0 /home/sinplay/ruralbridge/wp-content/plugins/duplicator/classes/package/class.pack.database.php(572): DUP_Log::Error('Error en el vol...', 'INSERT INTO `wp...', 1)
+#1 /home/sinplay/ruralbridge/wp-content/plugins/duplicator/classes/package/class.pack.database.php(208): DUP_Database->mysqlDump('mysqldump')
+#2 /home/sinplay/ruralbridge/wp-content/plugins/duplicator/classes/package/class.pack.php(1311): DUP_Database->build(Object(DUP_Package), 1)
+#3 /home/sinplay/ruralbridge/wp-content/plugins/duplicator/ctrls/ctrl.package.php(98): DUP_Package->runZipBuild()
+#4 /home/sinplay/ruralbridge/wp-includes/class-wp-hook.php(292): duplicator_package_build('')
+#5 /home/sinplay/ruralbridge/wp-includes/class-wp-hook.php(316): WP_Hook->apply_filters('', Array)
+#6 /home/sinplay/ruralbridge/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#7 /home/sinplay/ruralbridge/wp-admin/admin-ajax.php(187): do_action('wp_ajax_duplica...')
+#8 {main}
+TRACE:
+	 1. class.pack.database.php : Error (243)
+	 2. class.pack.php : build (1311)
+	 3. ctrl.package.php : runZipBuild (98)
+	 4. class-wp-hook.php : duplicator_package_build (292)
+	 5. class-wp-hook.php : apply_filters (316)
+	 6. plugin.php : do_action (484)
+	 7. admin-ajax.php : do_action (187)
+==================================================================================
+
+[PHP ERR][NOTICE] MSG:Undefined index: activated [CODE:8|FILE:/home/sinplay/ruralbridge/wp-content/themes/porto/inc/functions/class.theme-modules.php|LINE:615]
+DUP_Handler::shutdown, DUP_Handler::error, DUP_Handler::getMessage
